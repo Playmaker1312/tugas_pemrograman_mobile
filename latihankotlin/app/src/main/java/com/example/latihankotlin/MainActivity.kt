@@ -19,6 +19,8 @@ class MainActivity : AppCompatActivity() {
         val uUsername = findViewById<EditText>(R.id.eUsername)
         val uPassword = findViewById<EditText>(R.id.ePassword)
         val bLogin = findViewById<Button>(R.id.bLogin)
+        val bListView = findViewById<Button>(R.id.blistview)
+
 
         //membuat button apa bila diclik pindah ke halaman welcome page
         bLogin.setOnClickListener{
@@ -29,6 +31,11 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("username",Username)
             intent.putExtra("password",Password)
             startActivity(intent)
+        }
+
+        bListView.setOnClickListener(){
+            val listview = Intent (this, listviewactivity::class.java)
+            startActivity(listview)
         }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->

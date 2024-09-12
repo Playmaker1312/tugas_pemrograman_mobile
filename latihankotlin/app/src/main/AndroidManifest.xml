@@ -13,6 +13,7 @@
         android:theme="@style/Theme.LatihanKotlin"
         tools:targetApi="31">
         <activity android:name=".WelcomePage"/>
+        <activity android:name=".listviewactivity"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
